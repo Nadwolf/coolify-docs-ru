@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coolify Docs — Русская документация</title>
+  <meta name="description"
+    content="Документация Coolify на русском языке. PaaS с открытым исходным кодом для самостоятельного хостинга." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+
+  <!-- Portal styles -->
+  <link rel="stylesheet" href="portal.css" />
+</head>
+
+<body>
+
+  <!-- Overlay for mobile sidebar -->
+  <div id="overlay"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <a class="logo" href="#">
+      <div class="logo-icon">🚀</div>
+      <span class="logo-text">Coolify Docs</span>
+      <span class="logo-badge">RU</span>
+    </a>
+
+    <div class="header-search">
+      <span class="search-icon">🔍</span>
+      <input id="search-input" type="search" placeholder="Поиск по разделам…" autocomplete="off" spellcheck="false" />
+    </div>
+
+    <button id="theme-toggle" aria-label="Переключить тему" title="Переключить тему">🌙</button>
+  </header>
+
+  <!-- Main layout -->
+  <div id="app">
+    <!-- Sidebar -->
+    <nav id="sidebar" aria-label="Навигация по документации">
+      <div id="sidebar-nav"></div>
+    </nav>
+
+    <!-- Content area -->
+    <main id="main-area">
+      <div id="content">
+        <div class="loading">
+          <div class="spinner"></div>
+          <span>Загрузка документации…</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Portal logic -->
+  <script src="portal.js"></script>
+</body>
+
+</html>
